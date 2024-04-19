@@ -1,5 +1,6 @@
 import datetime
 import json
+import re
 from typing import Dict, List
 from xml.etree import ElementTree
 
@@ -75,13 +76,35 @@ def generate_document_fields(entrant_data: dict, fields: List[Dict]) -> dict | N
     return document_fields
 
 
+def get_addresses_info(entrant_data):
+    # TODO: create IsRegistration parameter logic
+    # TODO: IdRegion, City - ???
+    pattern = "^address_txt\d+"
+    addresses = []
+    is_address = lambda x: re.fullmatch(pattern, x)
+    address_fields = list(filter(is_address, entrant_data.keys()))
+    for i in range(1, len(address_fields) + 1):
+        full_addr = entrant_data.get(f"address_txt{i}")
+        if not full_addr:
+            break
+        address = {"Address": {
+            "IsRegistration": True,
+            "FullAddr": full_addr,
+            "IdRegion": 1,
+            "City": "From_kladr"
+        }
+        }
+        addresses.append(address)
+    return addresses
+
+
 def format_data(entrant_data: dict):
     """
     formats data for subsequent recording in xml
     :param entrant_data:
     :return:formated dict
     """
-    # TODO: add addresses parse
+
     # TODO: add FreeEducationReason
     # TODO: use pydantic model instead of template(data)
     # Model().model_dump(mode='python') - from model to dict
@@ -90,7 +113,7 @@ def format_data(entrant_data: dict):
     document_info = get_document_info(document_id)
     document_fields = document_info["FieldsDescription"]["fields"]
     fields = generate_document_fields(entrant_data, document_fields)  # getting filled documents fields
-
+    addresses = get_addresses_info(entrant_data)
     data = {
         "AddEntrant": {
             "Identification": {
@@ -110,16 +133,7 @@ def format_data(entrant_data: dict):
                 "IdFreeEducationReason": 1,
                 "IdOksmFreeEducationReason": 1
             },
-            "AddressList": {
-                "Address": [
-                    {
-                        "IsRegistration": 1,
-                        "FullAddr": "None",
-                        "IdRegion": 1,
-                        "City": "None"
-                    }
-                ]
-            }
+            "AddressList": addresses
         }
     }
     snils = entrant_data.get(convert_key("Snils"))
@@ -143,7 +157,6 @@ def entrant_data_to_xml(entrant_data: dict, validate=False):
     """
     data_to_convert = format_data(entrant_data)
     data = json2xml.Json2xml(data_to_convert, attr_type=False, item_wrap=False, wrapper="EntrantChoice").to_xml()
-
     if validate:
         try:
             with open(INCOMING_XML_SCHEMA_PATH, encoding='utf-8') as file:

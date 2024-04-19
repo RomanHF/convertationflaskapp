@@ -1,9 +1,9 @@
 import json
+
 from flask import Flask, request, Response, jsonify
 
 from config import VALIDATE_OUTPUT_XML, VALIDATE_INPUT_XML
 from json_service import entrant_data_to_xml
-
 from xml_service import entrant_to_json
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/EntrantToXml', methods=['POST'])
 def entrant_ro_json():
     try:
-        entrant_json = json.loads(request.json)#require content-type: application/json
+        entrant_json = json.loads(request.json)  # require content-type: application/json
     except Exception as e:
         return Response(f"Cant get json: {str(e)}", status=400)
     if not entrant_json:
@@ -21,8 +21,7 @@ def entrant_ro_json():
         entrant_xml = entrant_data_to_xml(entrant_json, validate=VALIDATE_OUTPUT_XML)
         return Response(entrant_xml, content_type="application/xml")
     except Exception as e:
-        return Response(str(e), status=400)
-
+        return Response(f"Failed to convert: {str(e)}", status=400)
 
 
 @app.route('/EntrantToJson', methods=['POST'])
