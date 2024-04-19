@@ -1,0 +1,716 @@
+[
+  {
+    "_id": {"$oid": "641ae50982c190f05501849d"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100001,
+    "IdCategory": 1,
+    "Name": "Паспорт гражданина Российской Федерации"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f05501849f"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100002,
+    "IdCategory": 1,
+    "Name": "Военный билет"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184a5"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100037,
+    "IdCategory": 1,
+    "Name": "Временное удостоверение личности"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184a6"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100038,
+    "IdCategory": 1,
+    "Name": "Вид на жительство"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184a7"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100039,
+    "IdCategory": 1,
+    "Name": "Заграничный паспорт гражданина Российской Федерации"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184a8"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100040,
+    "IdCategory": 1,
+    "Name": "Паспорт гражданина иностранного государства"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184a9"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "date",
+          "not_null": false,
+          "xml_name": "ExpirationDate",
+          "description": "Дата окончания срока действия"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100042,
+    "IdCategory": 1,
+    "Name": "Дипломатический паспорт"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184ab"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "date",
+          "not_null": false,
+          "xml_name": "ExpirationDate",
+          "description": "Дата окончания срока действия"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100043,
+    "IdCategory": 1,
+    "Name": "Служебный паспорт"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184ac"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100045,
+    "IdCategory": 1,
+    "Name": "Разрешение на временное проживание"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184ad"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100046,
+    "IdCategory": 1,
+    "Name": "Удостоверение беженца"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184ae"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100048,
+    "IdCategory": 1,
+    "Name": "Свидетельство о предоставлении временного убежища"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184b0"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100052,
+    "IdCategory": 1,
+    "Name": "Удостоверение военнослужащего Российской Федерации"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184b1"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100053,
+    "IdCategory": 1,
+    "Name": "Удостоверение личности моряка"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184b2"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        },
+        {
+          "type": "date",
+          "not_null": false,
+          "xml_name": "ProlongationDate",
+          "description": "Дата продления"
+        }
+      ]
+    },
+    "Id": 100054,
+    "IdCategory": 1,
+    "Name": "Временное удостоверение личности лица без гражданства в РФ"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184b3"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100055,
+    "IdCategory": 1,
+    "Name": "Документ, удостоверяющий личность на период рассмотрения заявления о признании гражданином РФ или о приеме в гражданство РФ"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184b4"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100056,
+    "IdCategory": 1,
+    "Name": "Свидетельство о рассмотрении ходатайства о признании беженцем на территории РФ по существу"
+  },
+  {
+    "_id": {"$oid": "641ae50982c190f0550184b5"},
+    "Actual": true,
+    "FieldsDescription": {
+      "fields": [
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "SubdivisionCode",
+          "description": "Код организации"
+        },
+        {
+          "type": "integer",
+          "not_null": true,
+          "xml_name": "IdOksm",
+          "xml_cls": "OksmCls",
+          "description": "Страна выдачи"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Surname",
+          "description": "Фамилия"
+        },
+        {
+          "type": "character",
+          "not_null": true,
+          "xml_name": "Name",
+          "description": "Имя"
+        },
+        {
+          "type": "character",
+          "not_null": false,
+          "xml_name": "Patronymic",
+          "description": "Отчество"
+        }
+      ]
+    },
+    "Id": 100057,
+    "IdCategory": 1,
+    "Name": "Документ, выданный иностранным государством и признаваемый в соответствии с международным договором РФ в качестве документа, удостоверяющего личность лица без гражданства"
+  }
+]

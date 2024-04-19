@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+   <xs:element name="PackageData">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element type="xs:positiveInteger" name="IdJwt">
+               <xs:annotation>
+                  <xs:documentation>Уникальный идентификатор запроса на обработку данных (токена)</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+            <xs:element type="String50Type" name="EntityAction">
+               <xs:annotation>
+                  <xs:documentation>Имя сущности и действие над сущностью сконкатенированное через '_'. Например "Campaign_Add"</xs:documentation>
+               </xs:annotation>
+            </xs:element>
+            <xs:element name="SuccessResultList" minOccurs="0">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="Entrant" minOccurs="1" maxOccurs="unbounded">
+                        <xs:annotation>
+                           <xs:documentation>Объект (сущность)</xs:documentation>
+                        </xs:annotation>
+                        <xs:complexType>
+                           <xs:all>
+                              <xs:element type="xs:positiveInteger" name="IdObject">
+                                 <xs:annotation>
+                                    <xs:documentation>Уникальный идентификатор объекта (сущности) в рамках данного токена</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="UidType" name="Guid">
+                                 <xs:annotation>
+                                    <xs:documentation>Уникальный идентификатор объекта (сущности) сгенерированный Сервисом приема</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="SnilsType" name="Snils" minOccurs="0">
+                                 <xs:annotation>
+                                    <xs:documentation>СНИЛС</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="xs:positiveInteger" name="IdGender">
+                                 <xs:annotation>
+                                    <xs:documentation>Пол. Идентификатор классификатора GenderCls</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="xs:date" name="Birthday">
+                                 <xs:annotation>
+                                    <xs:documentation>Дата рождения. Шаблон "2006-01-02"</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="String500Type" name="Birthplace">
+                                 <xs:annotation>
+                                    <xs:documentation>Место рождения</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="String120Type" name="Phone" minOccurs="0">
+                                 <xs:annotation>
+                                    <xs:documentation>Телефон</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="String150Type" name="Email" minOccurs="0">
+                                 <xs:annotation>
+                                    <xs:documentation>Электронный адрес</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="xs:boolean" name="AvailabilityEduDoc">
+                                 <xs:annotation>
+                                    <xs:documentation>Наличие документов о высшем образовании в ФРДО</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="xs:dateTime" name="DateAvailabilityEduDoc" minOccurs="0">
+                                 <xs:annotation>
+                                    <xs:documentation>Московское время последнего запроса на наличие документа о высшем образовании в ФРДО. Формат RFC3339 шаблон "2006-01-02T15:04:05+03:00"</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="String255Type" name="Surname">
+                                 <xs:annotation>
+                                    <xs:documentation>Фамилия</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="String255Type" name="Name">
+                                 <xs:annotation>
+                                    <xs:documentation>Имя</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="String255Type" name="Patronymic" minOccurs="0">
+                                 <xs:annotation>
+                                    <xs:documentation>Отчество</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element type="xs:positiveInteger" name="IdOksm">
+                                 <xs:annotation>
+                                    <xs:documentation>Гражданство - Идентификатор классификатора OksmCls</xs:documentation>
+                                 </xs:annotation>
+                              </xs:element>
+                              <xs:element name="FreeEducationReason" minOccurs="0">
+                                 <xs:complexType>
+                                    <xs:all>
+                                       <xs:element type="xs:positiveInteger" name="IdFreeEducationReason">
+                                          <xs:annotation>
+                                             <xs:documentation>Основания для получения бесплатного образования (для иностранца). Идентификатор классификатора FreeEducationReasonCls</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element type="xs:positiveInteger" name="IdOksmFreeEducationReason" minOccurs="0">
+                                          <xs:annotation>
+                                             <xs:documentation>Страна, с которой заключен договор. Идентификатор классификатора OksmCls</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                    </xs:all>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AddressList">
+                                 <xs:annotation>
+                                    <xs:documentation>Список адресов абирутиента</xs:documentation>
+                                 </xs:annotation>
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="Address" maxOccurs="unbounded">
+                                          <xs:annotation>
+                                             <xs:documentation>Адрес</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                             <xs:all>
+                                                <xs:element type="xs:boolean" name="IsRegistration">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Является ли данный адрес регистрацией поступающего</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="String1024Type" name="FullAddr">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Полный адрес</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="xs:positiveInteger" name="IdRegion">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Идентификатор классификатора RegionCls</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="String255Type" name="City">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Населенный пункт</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                             </xs:all>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DocumentList" minOccurs="0">
+                                 <xs:annotation>
+                                    <xs:documentation>Список документов абирутиента</xs:documentation>
+                                 </xs:annotation>
+                                 <xs:complexType>
+                                    <xs:sequence>
+                                       <xs:element name="Document" minOccurs="1" maxOccurs="unbounded">
+                                          <xs:annotation>
+                                             <xs:documentation>Документ</xs:documentation>
+                                          </xs:annotation>
+                                          <xs:complexType>
+                                             <xs:all>
+                                                <xs:element type="UidType" name="Guid">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Уникальный идентификатор объекта (сущности) сгенерированный Сервисом приема</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="String32Type" name="FileHash">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Хэш файла по которому можно узнать не менялось ли содержимое</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="xs:positiveInteger" name="IdDocumentType">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Тип документа. Идентификатор классификатора DocumentTypeCls</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="String255Type" name="DocName">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Наименование документа</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="String20Type" name="DocSeries" minOccurs="0">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Серия документа</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="String50Type" name="DocNumber" minOccurs="0">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Номер документа</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="xs:date" name="IssueDate" minOccurs="0">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Дата выдачи. Шаблон "2006-01-02"</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="String500Type" name="DocOrganization" minOccurs="0">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Огранизация, выдавшая документ</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="xs:positiveInteger" name="IdCheckStatus">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Статус проверки документа. Идентификатор классификатора DocumentCheckStatusCls</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                                <xs:element type="xs:positiveInteger" name="IdAchievementCategory" minOccurs="0">
+                                                   <xs:annotation>
+                                                      <xs:documentation>Категория индивидуального достижения. Идентификатор классификатора AchievementCategoryCls</xs:documentation>
+                                                   </xs:annotation>
+                                                </xs:element>
+                                             </xs:all>
+                                          </xs:complexType>
+                                       </xs:element>
+                                    </xs:sequence>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="Photo" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:all>
+                                       <xs:element type="String32Type" name="FileHash">
+                                          <xs:annotation>
+                                             <xs:documentation>Хэш файла по которому можно узнать не менялось ли содержимое</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                       <xs:element type="String50Type" name="Fui">
+                                          <xs:annotation>
+                                             <xs:documentation>Уникальный идентификатор файла в Сервисе Приема. По этому идентификатору можно получить файл в /api/file/get</xs:documentation>
+                                          </xs:annotation>
+                                       </xs:element>
+                                    </xs:all>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:all>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:complexType name="ParamType">
+      <xs:sequence>
+         <xs:element name="Param" maxOccurs="unbounded" minOccurs="1">
+            <xs:complexType>
+               <xs:all>
+                  <xs:element type="String100Type" name="Key" />
+                  <xs:element type="String350Type" name="Value" />
+               </xs:all>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="ErrorType">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Невалидный состав данных" />
+         <xs:enumeration value="Ошибка бизнес логики" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="SnilsType">
+      <xs:annotation>
+         <xs:documentation>СНИЛС</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:length value="11" />
+         <xs:pattern value="\d{11}" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="UidType">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="36" />
+         <xs:minLength value="10" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String20Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="20" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String32Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="32" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String50Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="50" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String120Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="120" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String150Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="150" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String100Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="100" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String200Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="200" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String255Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="255" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String350Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="350" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String500Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="500" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String1024Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="1024" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

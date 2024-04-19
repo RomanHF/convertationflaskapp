@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="EntrantChoice">
+	 <xs:complexType>
+		<xs:choice>
+		   <xs:element type="UidType" name="Guid">
+			  <xs:annotation>
+				 <xs:documentation>РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ РїСЂРѕС„РёР»СЊ РїРѕСЃС‚СѓРїР°СЋС‰РµРіРѕ. РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РЎРµСЂРІРёСЃРѕРј РїСЂРёРµРјР°</xs:documentation>
+			  </xs:annotation>
+		   </xs:element>
+		   <xs:element name="AddEntrant">
+			  <xs:annotation>
+				 <xs:documentation>РЎРѕР·РґР°С‚СЊ РЅРѕРІС‹Р№ РїСЂРѕС„РёР»СЊ РїРѕСЃС‚СѓРїР°СЋС‰РµРіРѕ, С‚.Рє. РЅРµС‚ С‚Р°РєРѕРіРѕ</xs:documentation>
+			  </xs:annotation>
+			  <xs:complexType>
+				 <xs:all>
+					<xs:element name="Identification">
+					   <xs:annotation>
+						  <xs:documentation>Р”РѕРєСѓРјРµРЅС‚ СѓРґРѕСЃС‚РѕРІРµСЂСЏСЋС‰РёР№ Р»РёС‡РЅРѕСЃС‚СЊ. Р¤РРћ, СѓРєР°Р·Р°РЅРЅС‹Рµ РІ РЅРµРј, Р±СѓРґСѓС‚ СЃС‡РёС‚Р°С‚СЊСЃСЏ Р¤РРћ РїРѕСЃС‚СѓРїР°СЋС‰РµРіРѕ. Р”РЈР› Р±СѓРґРµС‚ СЃС‡РёС‚Р°С‚СЊСЃСЏ РїРѕРґС‚РІРµСЂР¶РґРµРЅРЅС‹Рј РІСѓР·РѕРј</xs:documentation>
+					   </xs:annotation>
+					   <xs:complexType>
+						  <xs:all>
+							 <xs:element type="xs:positiveInteger" name="IdDocumentType">
+								<xs:annotation>
+								   <xs:documentation>РўРёРї РґРѕРєСѓРјРµРЅС‚Р°. РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° DocumentTypeCls</xs:documentation>
+								</xs:annotation>
+							 </xs:element>
+							 <xs:element type="String255Type" name="DocName">
+								<xs:annotation>
+								   <xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
+								</xs:annotation>
+							 </xs:element>
+							 <xs:element type="String20Type" name="DocSeries" minOccurs="0">
+								<xs:annotation>
+								   <xs:documentation>РЎРµСЂРёСЏ Р”РЈР›</xs:documentation>
+								</xs:annotation>
+							 </xs:element>
+							 <xs:element type="String50Type" name="DocNumber">
+								<xs:annotation>
+								   <xs:documentation>РќРѕРјРµСЂ Р”РЈР›</xs:documentation>
+								</xs:annotation>
+							 </xs:element>
+							 <xs:element type="xs:date" name="IssueDate">
+								<xs:annotation>
+								   <xs:documentation>Р”Р°С‚Р° РІС‹РґР°С‡Рё. РЁР°Р±Р»РѕРЅ "2006-01-02"</xs:documentation>
+								</xs:annotation>
+							 </xs:element>
+							 <xs:element type="String500Type" name="DocOrganization">
+								<xs:annotation>
+								   <xs:documentation>РћРіСЂР°РЅРёР·Р°С†РёСЏ, РІС‹РґР°РІС€Р°СЏ РґРѕРєСѓРјРµРЅС‚</xs:documentation>
+								</xs:annotation>
+							 </xs:element>
+							 <xs:element name="Fields" minOccurs="0">
+								<xs:annotation>
+								   <xs:documentation>Р РµРєРІРёР·РёС‚С‹, РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+								   <xs:sequence>
+									  <xs:any maxOccurs="unbounded" namespace="##any" processContents="skip" />
+								   </xs:sequence>
+								</xs:complexType>
+							 </xs:element>
+						  </xs:all>
+					   </xs:complexType>
+					</xs:element>
+					<xs:element type="SnilsType" name="Snils" minOccurs="0">
+					   <xs:annotation>
+						  <xs:documentation>РЎРќРР›РЎ - РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РґР»СЏ РіСЂР°Р¶РґР°РЅ Р Р¤</xs:documentation>
+					   </xs:annotation>
+					</xs:element>
+					<xs:element type="xs:positiveInteger" name="IdGender">
+					   <xs:annotation>
+						  <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° GenderCls</xs:documentation>
+					   </xs:annotation>
+					</xs:element>
+					<xs:element type="xs:date" name="Birthday">
+					   <xs:annotation>
+						  <xs:documentation>Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ. РЁР°Р±Р»РѕРЅ "2006-01-02"</xs:documentation>
+					   </xs:annotation>
+					</xs:element>
+					<xs:element type="String500Type" name="Birthplace">
+					   <xs:annotation>
+						  <xs:documentation>РњРµСЃС‚Рѕ СЂРѕР¶РґРµРЅРёСЏ</xs:documentation>
+					   </xs:annotation>
+					</xs:element>
+					<xs:element type="String120Type" name="Phone" minOccurs="0">
+					   <xs:annotation>
+						  <xs:documentation>РўРµР»РµС„РѕРЅ</xs:documentation>
+					   </xs:annotation>
+					</xs:element>
+					<xs:element type="String150Type" name="Email" minOccurs="0">
+					   <xs:annotation>
+						  <xs:documentation>Р­Р»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ</xs:documentation>
+					   </xs:annotation>
+					</xs:element>
+					<xs:element type="xs:positiveInteger" name="IdOksm">
+					   <xs:annotation>
+						  <xs:documentation>Р“СЂР°Р¶РґР°РЅСЃС‚РІРѕ - РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° OksmCls</xs:documentation>
+					   </xs:annotation>
+					</xs:element>
+					<xs:element name="FreeEducationReason" minOccurs="0">
+					   <xs:complexType>
+						  <xs:all>
+							 <xs:element type="xs:positiveInteger" name="IdFreeEducationReason">
+								<xs:annotation>
+								   <xs:documentation>РћСЃРЅРѕРІР°РЅРёСЏ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ Р±РµСЃРїР»Р°С‚РЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ (РґР»СЏ РёРЅРѕСЃС‚СЂР°РЅС†Р°). РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° FreeEducationReasonCls</xs:documentation>
+								</xs:annotation>
+							 </xs:element>
+							 <xs:element type="xs:positiveInteger" name="IdOksmFreeEducationReason" minOccurs="0">
+								<xs:annotation>
+								   <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° OkcmCls. Р•СЃР»Рё IdFreeEducationReason = "РњРµР¶РґСѓРЅР°СЂРѕРґРЅС‹Р№ РґРѕРіРѕРІРѕСЂ", С‚Рѕ РїРµСЂРµРґР°РµС‚СЃСЏ СЃС‚СЂР°РЅР°, СЃ РєРѕС‚РѕСЂРѕР№ Р·Р°РєР»СЋС‡РµРЅ РґРѕРіРѕРІРѕСЂ</xs:documentation>
+								</xs:annotation>
+							 </xs:element>
+						  </xs:all>
+					   </xs:complexType>
+					</xs:element>
+					<xs:element name="AddressList">
+					   <xs:annotation>
+						  <xs:documentation>РЎРїРёСЃРѕРє Р°РґСЂРµСЃРѕРІ Р°Р±РёСЂСѓС‚РёРµРЅС‚Р°</xs:documentation>
+					   </xs:annotation>
+					   <xs:complexType>
+						  <xs:sequence>
+							 <xs:element name="Address" maxOccurs="unbounded">
+								<xs:annotation>
+								   <xs:documentation>РђРґСЂРµСЃ</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+								   <xs:all>
+									  <xs:element type="xs:boolean" name="IsRegistration">
+										 <xs:annotation>
+											<xs:documentation>РЇРІР»СЏРµС‚СЃСЏ Р»Рё РґР°РЅРЅС‹Р№ Р°РґСЂРµСЃ СЂРµРіРёСЃС‚СЂР°С†РёРµР№ РїРѕСЃС‚СѓРїР°СЋС‰РµРіРѕ</xs:documentation>
+										 </xs:annotation>
+									  </xs:element>
+									  <xs:element type="String1024Type" name="FullAddr">
+										 <xs:annotation>
+											<xs:documentation>РџРѕР»РЅС‹Р№ Р°РґСЂРµСЃ</xs:documentation>
+										 </xs:annotation>
+									  </xs:element>
+									  <xs:element type="xs:positiveInteger" name="IdRegion">
+										 <xs:annotation>
+											<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° RegionCls</xs:documentation>
+										 </xs:annotation>
+									  </xs:element>
+									  <xs:element type="String255Type" name="City">
+										 <xs:annotation>
+											<xs:documentation>РќР°СЃРµР»РµРЅРЅС‹Р№ РїСѓРЅРєС‚</xs:documentation>
+										 </xs:annotation>
+									  </xs:element>
+								   </xs:all>
+								</xs:complexType>
+							 </xs:element>
+						  </xs:sequence>
+					   </xs:complexType>
+					</xs:element>
+				 </xs:all>
+			  </xs:complexType>
+		   </xs:element>
+		</xs:choice>
+	 </xs:complexType>
+	</xs:element>
+   <xs:simpleType name="String9Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="9" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String13Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="13" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="SnilsType">
+      <xs:annotation>
+         <xs:documentation>РЎРќРР›РЎ</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:length value="11" />
+         <xs:pattern value="\d{11}" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="UidType">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="36" />
+         <xs:minLength value="10" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String20Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="20" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String50Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="50" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String120Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="120" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String150Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="150" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String255Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="255" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String500Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="500" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="String1024Type">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="1024" />
+         <xs:minLength value="1" />
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

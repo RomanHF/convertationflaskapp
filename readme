@@ -1,0 +1,14 @@
+Для запуска Flask сервера требуется запустить app.py: python app.py
+Словарь для сопоставления ключей находится в json_service.py
+
+Определено два эндпоинта:
+/EntrantToXml - обрабатывает POST запрос, content-type: application/json, возвращает xml, либо ошибку
+/EntrantToJson - обрабатывает POST запрос, content-type: application/xml, возвращает json, либо ошибку
+
+Пути к схемам и к dict_document_type_cls.json указываются в  config.py
+
+Включение/выключение валидации происходит в config.py
+
+
+На текущий момент  при конвертаци  в  xml не реализован парсинг разделов : "FreeEducationReason", "AddressList".
+Данные блоки заполняются константными значениями
