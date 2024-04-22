@@ -85,13 +85,16 @@ def get_addresses_info(entrant_data):
     address_fields = list(filter(is_address, entrant_data.keys()))
     for i in range(1, len(address_fields) + 1):
         full_addr = entrant_data.get(f"address_txt{i}")
+        registration = entrant_data.get(f"address_registration{i}")
+        city = entrant_data.get(f"address_city{i}")
+        region = entrant_data.get(f"address_region{i}")
         if not full_addr:
             break
         address = {"Address": {
-            "IsRegistration": True,
+            "IsRegistration": registration,
             "FullAddr": full_addr,
-            "IdRegion": 1,
-            "City": "From_kladr"
+            "IdRegion": region,
+            "City": city
         }
         }
         addresses.append(address)
